@@ -1,0 +1,14 @@
+[package]
+name = "rust-wordl"
+version = "0.1.0"
+edition = "2021"
+description = "A word guessing game written in Rust"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+colored = "2.0.0"
+crossterm = "0.19.0"
+rand = "0.8.4"
+
