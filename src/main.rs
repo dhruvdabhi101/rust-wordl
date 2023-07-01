@@ -24,6 +24,7 @@ fn main() {
         // getting input 
         let mut guess = String::new();
         std::io::stdin().read_line(&mut guess).expect("Failed to read line");
+        let guess = guess.to_lowercase().trim().to_string();
 
 
         // moving cursor up to print the word again
@@ -35,7 +36,7 @@ fn main() {
             if guess.as_bytes()[i] == word.as_bytes()[i] {
                 print!("{}", guess.chars().nth(i).unwrap().green().bold());
             } else if word.as_bytes().contains(&guess.as_bytes()[i]) {
-                print!("{}", guess.chars().nth(i).unwrap().yellow().bold());
+                print!("{}", guess.chars().nth(i).unwrap().blue().bold());
             } else {
                 print!("{}", guess.chars().nth(i).unwrap().red().bold());
             }
@@ -52,7 +53,7 @@ fn main() {
 
     // print the result
     if !won {
-        println!("Haha, you lost bitch");
+        println!("You Lost!!");
         println!("Word was {}", word);
     }else {
         println!("You are the G, You Won!!");
